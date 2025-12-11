@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "brandColor": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "squareLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::testimonial.testimonial",
+      "mappedBy": "client"
+    },
+    "case_study": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::case-study.case-study",
+      "mappedBy": "client"
+    }
+  }
+}
