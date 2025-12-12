@@ -11,6 +11,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "slug": {
+      "type": "string"
+    },
     "title": {
       "type": "string"
     },
