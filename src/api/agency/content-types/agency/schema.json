@@ -4,7 +4,7 @@
   "info": {
     "singularName": "agency",
     "pluralName": "agencies",
-    "displayName": "agency"
+    "displayName": "Agency"
   },
   "options": {
     "draftAndPublish": true

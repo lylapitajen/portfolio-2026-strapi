@@ -470,7 +470,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAgencyAgency extends Struct.CollectionTypeSchema {
   collectionName: 'agencies';
   info: {
-    displayName: 'agency';
+    displayName: 'Agency';
     pluralName: 'agencies';
     singularName: 'agency';
   };
