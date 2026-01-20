@@ -48,6 +48,12 @@
       "relation": "oneToOne",
       "target": "api::case-study.case-study",
       "mappedBy": "client"
+    },
+    "agency": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agency.agency",
+      "inversedBy": "clients"
     }
   }
 }
