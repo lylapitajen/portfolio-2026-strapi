@@ -29,6 +29,9 @@
       "relation": "oneToMany",
       "target": "api::client.client",
       "mappedBy": "agency"
+    },
+    "website": {
+      "type": "string"
     }
   }
 }
