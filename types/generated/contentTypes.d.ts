@@ -521,14 +521,17 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     longSummary: Schema.Attribute.Text;
-    previewImage: Schema.Attribute.Media<
+    previewMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    problemSummary: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
     resultsMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    resultSummary: Schema.Attribute.RichText;
+    roleSummary: Schema.Attribute.RichText;
     shortSummary: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;

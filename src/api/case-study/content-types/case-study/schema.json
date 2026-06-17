@@ -18,19 +18,13 @@
       "type": "uid",
       "targetField": "title"
     },
-    "shortSummary": {
-      "type": "text"
-    },
-    "longSummary": {
-      "type": "text"
-    },
     "client": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::client.client",
       "inversedBy": "case_study"
     },
-    "previewImage": {
+    "previewMedia": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -39,6 +33,21 @@
         "videos",
         "audios"
       ]
+    },
+    "shortSummary": {
+      "type": "text"
+    },
+    "longSummary": {
+      "type": "text"
+    },
+    "problemSummary": {
+      "type": "richtext"
+    },
+    "roleSummary": {
+      "type": "richtext"
+    },
+    "resultSummary": {
+      "type": "richtext"
     },
     "content": {
       "type": "richtext"
