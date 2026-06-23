@@ -17,11 +17,11 @@
     "company": {
       "type": "string"
     },
-    "start": {
-      "type": "string"
+    "startDate": {
+      "type": "date"
     },
-    "end": {
-      "type": "string"
+    "endDate": {
+      "type": "date"
     },
     "description": {
       "type": "richtext"
