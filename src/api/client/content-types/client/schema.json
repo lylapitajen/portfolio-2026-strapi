@@ -43,9 +43,9 @@
       "target": "api::testimonial.testimonial",
       "mappedBy": "client"
     },
-    "case_study": {
+    "case_studies": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::case-study.case-study",
       "mappedBy": "client"
     },

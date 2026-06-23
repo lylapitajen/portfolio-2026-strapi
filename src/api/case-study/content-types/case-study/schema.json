@@ -20,9 +20,9 @@
     },
     "client": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::client.client",
-      "inversedBy": "case_study"
+      "inversedBy": "case_studies"
     },
     "previewMedia": {
       "type": "media",

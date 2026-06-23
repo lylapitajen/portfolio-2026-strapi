@@ -509,7 +509,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    client: Schema.Attribute.Relation<'oneToOne', 'api::client.client'>;
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
     content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -554,8 +554,8 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
   attributes: {
     agency: Schema.Attribute.Relation<'manyToOne', 'api::agency.agency'>;
     brandColor: Schema.Attribute.String;
-    case_study: Schema.Attribute.Relation<
-      'oneToOne',
+    case_studies: Schema.Attribute.Relation<
+      'oneToMany',
       'api::case-study.case-study'
     >;
     createdAt: Schema.Attribute.DateTime;
