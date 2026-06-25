@@ -583,6 +583,31 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCvCv extends Struct.SingleTypeSchema {
+  collectionName: 'cvs';
+  info: {
+    displayName: 'cv';
+    pluralName: 'cvs';
+    singularName: 'cv';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cv: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::cv.cv'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
   collectionName: 'experiences';
   info: {
@@ -1160,6 +1185,7 @@ declare module '@strapi/strapi' {
       'api::agency.agency': ApiAgencyAgency;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::client.client': ApiClientClient;
+      'api::cv.cv': ApiCvCv;
       'api::experience.experience': ApiExperienceExperience;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'plugin::content-releases.release': PluginContentReleasesRelease;
